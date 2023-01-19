@@ -1,0 +1,45 @@
+"""
+-------------------------------------------------------
+Assignment 4 Testing
+-------------------------------------------------------
+Author:  Kevin Lee
+ID:      210872060
+Email:   leex7206@mylaurier.ca
+Version: 2022-10-18
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+[('broad', 'BASE TABLE', 19, 'Contains broad categories of security expertise.'), ('member', 'BASE TABLE', 82, 'Contains information on Members of the DCRIS directory.'), ('memberBroad', 'BASE TABLE', 307, 'Joins broad to member through a lookup table.'), ('memberNarrow', 'BASE TABLE', 1296, 'Joins Member to Supp_Key through a lookup table.'), ('narrow', 'BASE TABLE', 160, 'Contains narrow categories of security expertise.'), ('pub', 'BASE TABLE', 229, 'Contains representative Publications of Members.'), ('pubType', 'BASE TABLE', 3, 'Primary key identifier for publication type.'), ('vBroadNarrow', 'VIEW', None, 'VIEW'), ('vMemberBroad', 'VIEW', None, 'VIEW'), ('vMemberNarrow', 'VIEW', None, 'VIEW')]
+[('broad', 'BASE TABLE', 19, 'Contains broad categories of security expertise.')]
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+[('broad', 'broadDesc', 'NO', b'varchar'), ('broad', 'broadId', 'NO', b'tinyint'), ('member', 'memberAddress', 'YES', b'longtext'), ('member', 'memberEmail', 'YES', b'varchar'), ('member', 'memberFax', 'YES', b'varchar'), ('member', 'memberForename', 'YES', b'varchar'), ('member', 'memberId', 'NO', b'smallint'), ('member', 'memberInstitution', 'YES', b'longtext'), ('member', 'memberSurname', 'NO', b'varchar'), ('member', 'memberTelephone', 'YES', b'varchar'), ('member', 'memberTitle', 'YES', b'varchar'), ('memberBroad', 'memberBroadBroadId', 'NO', b'tinyint'), ('memberBroad', 'memberBroadMemberId', 'NO', b'smallint'), ('memberNarrow', 'memberNarrowMemberId', 'NO', b'smallint'), ('memberNarrow', 'memberNarrowNarrowId', 'NO', b'smallint'), ('narrow', 'narrowBroadId', 'NO', b'tinyint'), ('narrow', 'narrowDesc', 'NO', b'varchar'), ('narrow', 'narrowId', 'NO', b'smallint'), ('pub', 'pubAuthors', 'YES', b'longtext'), ('pub', 'pubConference', 'YES', b'longtext'), ('pub', 'pubDate', 'YES', b'longtext'), ('pub', 'pubId', 'NO', b'smallint'), ('pub', 'pubJournal', 'YES', b'longtext'), ('pub', 'pubMemberId', 'NO', b'smallint'), ('pub', 'pubPublisher', 'YES', b'longtext'), ('pub', 'pubPubType', 'NO', b'char'), ('pub', 'pubTitle', 'NO', b'longtext'), ('pub', 'pubVolume', 'YES', b'longtext'), ('pubType', 'pubType', 'NO', b'char'), ('pubType', 'pubTypeDesc', 'NO', b'varchar'), ('vBroadNarrow', 'broadDesc', 'NO', b'varchar'), ('vBroadNarrow', 'broadId', 'NO', b'tinyint'), ('vBroadNarrow', 'narrowDesc', 'NO', b'varchar'), ('vBroadNarrow', 'narrowId', 'NO', b'smallint'), ('vMemberBroad', 'broadDesc', 'NO', b'varchar'), ('vMemberBroad', 'broadId', 'NO', b'tinyint'), ('vMemberBroad', 'memberAddress', 'YES', b'longtext'), ('vMemberBroad', 'memberEmail', 'YES', b'varchar'), ('vMemberBroad', 'memberFax', 'YES', b'varchar'), ('vMemberBroad', 'memberForename', 'YES', b'varchar'), ('vMemberBroad', 'memberId', 'NO', b'smallint'), ('vMemberBroad', 'memberInstitution', 'YES', b'longtext'), ('vMemberBroad', 'memberSurname', 'NO', b'varchar'), ('vMemberBroad', 'memberTelephone', 'YES', b'varchar'), ('vMemberBroad', 'memberTitle', 'YES', b'varchar'), ('vMemberNarrow', 'broadDesc', 'NO', b'varchar'), ('vMemberNarrow', 'broadId', 'NO', b'tinyint'), ('vMemberNarrow', 'memberAddress', 'YES', b'longtext'), ('vMemberNarrow', 'memberEmail', 'YES', b'varchar'), ('vMemberNarrow', 'memberFax', 'YES', b'varchar'), ('vMemberNarrow', 'memberForename', 'YES', b'varchar'), ('vMemberNarrow', 'memberId', 'NO', b'smallint'), ('vMemberNarrow', 'memberInstitution', 'YES', b'longtext'), ('vMemberNarrow', 'memberSurname', 'NO', b'varchar'), ('vMemberNarrow', 'memberTelephone', 'YES', b'varchar'), ('vMemberNarrow', 'memberTitle', 'YES', b'varchar'), ('vMemberNarrow', 'narrowDesc', 'NO', b'varchar'), ('vMemberNarrow', 'narrowId', 'NO', b'smallint')]
+[('member', 'memberAddress', 'YES', b'longtext'), ('member', 'memberEmail', 'YES', b'varchar'), ('member', 'memberFax', 'YES', b'varchar'), ('member', 'memberForename', 'YES', b'varchar'), ('member', 'memberId', 'NO', b'smallint'), ('member', 'memberInstitution', 'YES', b'longtext'), ('member', 'memberSurname', 'NO', b'varchar'), ('member', 'memberTelephone', 'YES', b'varchar'), ('member', 'memberTitle', 'YES', b'varchar')]
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+[('fkBroad', 'narrow', 'FOREIGN KEY'), ('fkMemberBroadBroad', 'memberBroad', 'FOREIGN KEY'), ('fkMemberBroadMember', 'memberBroad', 'FOREIGN KEY'), ('fkMemberNarrowMember', 'memberNarrow', 'FOREIGN KEY'), ('fkMemberNarrowNarrow', 'memberNarrow', 'FOREIGN KEY'), ('fkPubMember', 'pub', 'FOREIGN KEY'), ('fkPubType', 'pub', 'FOREIGN KEY'), ('inBroadDesc', 'broad', 'UNIQUE'), ('inNarrowDesc', 'narrow', 'UNIQUE'), ('inPubTypeDesc', 'pubType', 'UNIQUE'), ('PRIMARY', 'broad', 'PRIMARY KEY'), ('PRIMARY', 'member', 'PRIMARY KEY'), ('PRIMARY', 'memberBroad', 'PRIMARY KEY'), ('PRIMARY', 'memberNarrow', 'PRIMARY KEY'), ('PRIMARY', 'narrow', 'PRIMARY KEY'), ('PRIMARY', 'pub', 'PRIMARY KEY'), ('PRIMARY', 'pubType', 'PRIMARY KEY')]
+[('fkBroad', 'narrow', 'FOREIGN KEY'), ('fkMemberBroadBroad', 'memberBroad', 'FOREIGN KEY'), ('fkMemberBroadMember', 'memberBroad', 'FOREIGN KEY'), ('fkMemberNarrowMember', 'memberNarrow', 'FOREIGN KEY'), ('fkMemberNarrowNarrow', 'memberNarrow', 'FOREIGN KEY'), ('fkPubMember', 'pub', 'FOREIGN KEY'), ('fkPubType', 'pub', 'FOREIGN KEY')]
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+[('fkBroad', 'CASCADE', 'CASCADE', 'narrow', 'broad'), ('fkMemberBroadBroad', 'CASCADE', 'CASCADE', 'memberBroad', 'broad'), ('fkMemberBroadMember', 'CASCADE', 'CASCADE', 'memberBroad', 'member'), ('fkMemberNarrowMember', 'CASCADE', 'CASCADE', 'memberNarrow', 'member'), ('fkMemberNarrowNarrow', 'CASCADE', 'CASCADE', 'memberNarrow', 'narrow'), ('fkPubMember', 'CASCADE', 'CASCADE', 'pub', 'member'), ('fkPubType', 'RESTRICT', 'RESTRICT', 'pub', 'pubType')]
+[('fkPubMember', 'CASCADE', 'CASCADE', 'pub', 'member'), ('fkPubType', 'RESTRICT', 'RESTRICT', 'pub', 'pubType')]
+[('fkMemberBroadMember', 'CASCADE', 'CASCADE', 'memberBroad', 'member'), ('fkMemberNarrowMember', 'CASCADE', 'CASCADE', 'memberNarrow', 'member'), ('fkPubMember', 'CASCADE', 'CASCADE', 'pub', 'member')]
+[('fkPubMember', 'CASCADE', 'CASCADE', 'pub', 'member')]
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+[('inBroadDesc', 'broad', 'broadDesc', None, None), ('PRIMARY', 'broad', 'broadId', None, None), ('PRIMARY', 'member', 'memberId', None, None), ('PRIMARY', 'memberBroad', 'memberBroadBroadId', None, None), ('fkMemberBroadBroad', 'memberBroad', 'memberBroadBroadId', 'broad', 'broadId'), ('PRIMARY', 'memberBroad', 'memberBroadMemberId', None, None), ('fkMemberBroadMember', 'memberBroad', 'memberBroadMemberId', 'member', 'memberId'), ('PRIMARY', 'memberNarrow', 'memberNarrowMemberId', None, None), ('fkMemberNarrowMember', 'memberNarrow', 'memberNarrowMemberId', 'member', 'memberId'), ('fkMemberNarrowNarrow', 'memberNarrow', 'memberNarrowNarrowId', 'narrow', 'narrowId'), ('PRIMARY', 'memberNarrow', 'memberNarrowNarrowId', None, None), ('inNarrowDesc', 'narrow', 'narrowBroadId', None, None), ('fkBroad', 'narrow', 'narrowBroadId', 'broad', 'broadId'), ('inNarrowDesc', 'narrow', 'narrowDesc', None, None), ('PRIMARY', 'narrow', 'narrowId', None, None), ('PRIMARY', 'pub', 'pubId', None, None), ('fkPubMember', 'pub', 'pubMemberId', 'member', 'memberId'), ('fkPubType', 'pub', 'pubPubType', 'pubType', 'pubType'), ('PRIMARY', 'pubType', 'pubType', None, None), ('inPubTypeDesc', 'pubType', 'pubTypeDesc', None, None)]
+[('PRIMARY', 'pub', 'pubId', None, None), ('fkPubMember', 'pub', 'pubMemberId', 'member', 'memberId'), ('fkPubType', 'pub', 'pubPubType', 'pubType', 'pubType')]
+[('fkPubType', 'pub', 'pubPubType', 'pubType', 'pubType')]
+[('fkPubType', 'pub', 'pubPubType', 'pubType', 'pubType')]
+
+-------------------------------------------------------
